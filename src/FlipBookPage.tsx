@@ -1,7 +1,5 @@
 import React from "react";
 import './App.css';
-import pageEvenImage from './PageEven.png';
-import pageOddImage from './PageOdd.png';
 
 interface FlipBookPageProps {
     pageNum: number;
@@ -9,16 +7,10 @@ interface FlipBookPageProps {
 
 const FlipBookPage = React.forwardRef<HTMLDivElement, FlipBookPageProps>(({pageNum}, ref) => {
     const isEvenPage = pageNum % 2 === 0;
-    const backgroundImage = isEvenPage ? pageEvenImage : pageOddImage;
+    const className = isEvenPage ? "evenPage" : "oddPage";
 
     return (
-        <div className="demoPage" ref={ref} style={{
-            backgroundImage: backgroundImage,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundColor: '#f4e4bc'
-        }}>
+        <div className={`pageStyle ${className}`} ref={ref}>
             <h1>Page Header</h1>
             <p>Some text</p>
             <p>Page number: {pageNum}</p>

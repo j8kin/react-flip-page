@@ -35,7 +35,7 @@
   color: #61dafb;
 }
 
-.demoPage {
+.pageStyle {
   color: yellow;
   padding: 20px;
   display: flex;
@@ -48,7 +48,17 @@
   height: 100%;
   box-sizing: border-box;
   min-height: 400px;
-  background-image: url('./PageBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f4e4bc;
+}
+.oddPage {
+  background-image: url('./PageOdd.png');
+}
+
+.evenPage {
+  background-image: url('./PageEven.png');
 }
 
 .flipbook {
