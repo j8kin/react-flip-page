@@ -1,75 +1,94 @@
 .App {
-  text-align: center;
-  background-color: gray;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
+    text-align: center;
+    background-color: gray;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 .pageStyle {
-  color: yellow;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  min-height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #f4e4bc;
+    color: yellow;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 370px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .oddPage {
-  background-image: url('./PageOdd.png');
+    background-image: url('./PageOdd.png');
+    padding-left: 30px;
+    padding-right: 5px;
 }
 
 .evenPage {
-  background-image: url('./PageEven.png');
+    background-image: url('./PageEven.png');
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+.flipbook-container {
+    width: 780px;
+    height: 600px;
+    background-image: url('./opened-book.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .flipbook {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);*/
+    margin-bottom: 135px;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

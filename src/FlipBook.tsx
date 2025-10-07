@@ -29,8 +29,8 @@ interface FlipBookPageProps {
 }
 
 const FlipBook: React.FC<FlipBookPageProps> = ({
-  width = 320,
-  height = 480,
+  width = 420,
+  height = 380,
   children,
   className = "flipbook",
   style = {},
@@ -38,11 +38,11 @@ const FlipBook: React.FC<FlipBookPageProps> = ({
   minHeight,
   maxWidth,
   maxHeight,
-  maxShadowOpacity = 0.5,
+  maxShadowOpacity = 0,
   showCover = false,
   mobileScrollSupport = true,
   startPage = 0,
-  drawShadow = true,
+  drawShadow = false,
   flippingTime = 1000,
   usePortrait = false,
   startZIndex = 0,
@@ -55,33 +55,35 @@ const FlipBook: React.FC<FlipBookPageProps> = ({
   size = "fixed"
 }) => {
   return (
-    <HTMLFlipBook
-      width={width}
-      height={height}
-      size={size}
-      minWidth={minWidth || width}
-      minHeight={minHeight || height}
-      maxWidth={maxWidth || width * 2}
-      maxHeight={maxHeight || height}
-      maxShadowOpacity={maxShadowOpacity}
-      showCover={showCover}
-      mobileScrollSupport={mobileScrollSupport}
-      className={className}
-      style={style}
-      startPage={startPage}
-      drawShadow={drawShadow}
-      flippingTime={flippingTime}
-      usePortrait={usePortrait}
-      startZIndex={startZIndex}
-      autoSize={autoSize}
-      clickEventForward={clickEventForward}
-      useMouseEvents={useMouseEvents}
-      swipeDistance={swipeDistance}
-      showPageCorners={showPageCorners}
-      disableFlipByClick={disableFlipByClick}
-    >
-      {children}
-    </HTMLFlipBook>
+    <div className="flipbook-container">
+      <HTMLFlipBook
+        width={width}
+        height={height}
+        size={size}
+        minWidth={minWidth || width}
+        minHeight={minHeight || height}
+        maxWidth={maxWidth || width }
+        maxHeight={maxHeight || height}
+        maxShadowOpacity={maxShadowOpacity}
+        showCover={showCover}
+        mobileScrollSupport={mobileScrollSupport}
+        className={className}
+        style={style}
+        startPage={startPage}
+        drawShadow={drawShadow}
+        flippingTime={flippingTime}
+        usePortrait={usePortrait}
+        startZIndex={startZIndex}
+        autoSize={autoSize}
+        clickEventForward={clickEventForward}
+        useMouseEvents={useMouseEvents}
+        swipeDistance={swipeDistance}
+        showPageCorners={showPageCorners}
+        disableFlipByClick={disableFlipByClick}
+      >
+        {children}
+      </HTMLFlipBook>
+    </div>
   );
 };
 

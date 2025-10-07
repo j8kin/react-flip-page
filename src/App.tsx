@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <FlipBook
-        width={320}
-        height={480}
-        maxWidth={640}
+        width={333}
+        height={429}
+        maxWidth={860}
       >
         <FlipBookPage pageNum={1} />
         <FlipBookPage pageNum={2} />
